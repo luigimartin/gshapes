@@ -1,4 +1,8 @@
-package com.selexsi.swim.Gshapes;
+/** @author luigimartin.petrella@gmail.com
+ *  
+ */
+
+package it.sesm.mpetrella.gshapes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +15,7 @@ public class Coordinates {
 		coordinates  = new ArrayList<coordinate>();		
 	}
 	
-	public void add(Double _lat , Double _lon , Double _height){ 
+	public void add(double _lat , double _lon , double _height){ 
 		coordinate c= new coordinate(_lat, _lon, _height);
 		coordinates.add(c);
 	}
@@ -43,7 +47,7 @@ public class Coordinates {
 	public String Coordinates2String(){
 		String _toString="";
 		for(int i=0; i<coordinates.size(); i++)
-			_toString= _toString + coordinates.get(i).coordinates2String();
+			_toString= _toString + coordinates.get(i).coordinate2String();
  
 		return _toString;
 	}
@@ -77,7 +81,7 @@ public class Coordinates {
 	public void setHeight(double height) {
 		Height = height;
 	}
-	public String coordinates2String(){
+	public String coordinate2String(){
 		return Lon + "," + Lat + "," + Height + " \n ";
 	}
 	

@@ -1,4 +1,4 @@
-import com.selexsi.swim.Gshapes.*;
+import it.sesm.mpetrella.gshapes.*;
 
 public class testShapes {
 
