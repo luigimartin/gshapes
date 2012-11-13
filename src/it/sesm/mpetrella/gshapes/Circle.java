@@ -1,4 +1,9 @@
-package com.selexsi.swim.Gshapes;
+/** @author luigimartin.petrella@gmail.com
+ *  
+ */
+
+
+package it.sesm.mpetrella.gshapes;
 
 
 public class Circle extends Shape {
