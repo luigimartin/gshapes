@@ -3,7 +3,7 @@
  */
 
 
-package it.sesm.mpetrella.gshapes;
+package it.lmpetrella.gshapes;
 
 
 public class Circle extends Shape {
