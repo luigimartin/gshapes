@@ -2,7 +2,7 @@
  *  
  */
 
-package it.sesm.mpetrella.gshapes;
+package it.lmpetrella.gshapes;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-import it.sesm.mpetrella.gshapes.*;
+import it.lmpetrella.gshapes.*;
 
 public class testShapes {
 
