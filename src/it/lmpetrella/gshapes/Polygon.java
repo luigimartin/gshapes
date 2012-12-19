@@ -16,19 +16,6 @@ public class Polygon extends Shape {
 		calculateCoordinates();
 	}
 	
-	public Polygon(int _sides, double _center_lat, double _center_lon, double _radius,
-			double _height) {
-		super(_center_lat, _center_lon, _radius, _height);
-		this.sides=_sides;
-		calculateCoordinates();
-		}
-
-	public Polygon(int _sides , double _center_lat, double _center_lon, double _radius , double _height,  double _inclination) {
-		super(_center_lat, _center_lon, _radius, _height);
-		this.sides=_sides;
-		this.inclination=_inclination;
-		calculateCoordinates();
-	}
 
 	public int getSides() {
 		return sides;

@@ -14,16 +14,6 @@ public class Circle extends Shape {
 		calculateCoordinates();
 	}
 	
-	public Circle(double _center_lat, double _center_lon, double _radius,
-			double _height) {
-		super(_center_lat, _center_lon, _radius, _height);
-		calculateCoordinates();
-	}
-
-	public Circle(double _center_lat, double _center_lon, double _radius) {
-		super(_center_lat, _center_lon, _radius);
-		calculateCoordinates();
-	}
 
 
 	

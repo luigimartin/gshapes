@@ -20,21 +20,6 @@ public abstract class Shape {
 		this.coordinates = new Coordinates();
 	}
 	
-	public Shape(double _center_lat, double _center_lon ,double _radius){
-		this.center_lat=_center_lat;
-		this.center_lon=_center_lon;
-		this.radius=_radius;
-		this.height=0;
-		this.coordinates = new Coordinates();
-	}
-	
-	public Shape(double _center_lat,double _center_lon, double _radius , double _height){
-		this.center_lat=_center_lat;
-		this.center_lon=_center_lon;
-		this.radius=_radius;
-		this.height=_height;
-		this.coordinates = new Coordinates();
-	}
 
 		
 	public double getCenter_lat() {
