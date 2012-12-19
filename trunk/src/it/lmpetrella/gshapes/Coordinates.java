@@ -9,19 +9,19 @@ import java.util.List;
 
 public class Coordinates {
 
-	private List<coordinate> coordinates;
+	private List<Point> coordinates;
 	
 	public Coordinates(){
-		coordinates  = new ArrayList<coordinate>();		
+		coordinates  = new ArrayList<Point>();		
 	}
 	
 	public void add(double _lat , double _lon , double _height){ 
-		coordinate c= new coordinate(_lat, _lon, _height);
+		Point c= new Point(_lat, _lon, _height);
 		coordinates.add(c);
 	}
 	
 	public void add(double _lat , double _lon ){ 
-		coordinate c= new coordinate(_lat, _lon, 0D);
+		Point c= new Point(_lat, _lon, 0D);
 		coordinates.add(c);
 	}
 	
@@ -29,18 +29,18 @@ public class Coordinates {
 		double _lat = Double.parseDouble(s_lat);
 		double _lon = Double.parseDouble(s_lon);
 		double _height = Double.parseDouble(s_height);
-		coordinate c= new coordinate(_lat, _lon, _height);
+		Point c= new Point(_lat, _lon, _height);
 		coordinates.add(c);
 	}
 	
 	public void add(String s_lat , String s_lon){ 
 		double _lat = Double.parseDouble(s_lat);
 		double _lon = Double.parseDouble(s_lon);
-		coordinate c= new coordinate(_lat, _lon, 0D);
+		Point c= new Point(_lat, _lon, 0D);
 		coordinates.add(c);
 	}
 	
-	public coordinate get(int i){
+	public Point get(int i){
 		return coordinates.get(i);
 	}
 	
@@ -52,12 +52,12 @@ public class Coordinates {
 		return _toString;
 	}
 	
-	public class coordinate{
+	public class Point{
 	private double Lat;
 	private double Lon;
 	private double Height;
 	
-	public coordinate(double _lat , double _lon , double _height){
+	public Point(double _lat , double _lon , double _height){
 		this.Lat=_lat;
 		this.Lon=_lon;
 		this.Height= _height;
