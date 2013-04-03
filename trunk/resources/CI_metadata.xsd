@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xsd:element name="CI">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="Basic_Info"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="Resources"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="Linked_CIs"/>
+                <xsd:element maxOccurs="unbounded" minOccurs="0" ref="Implemented_CRs"/>
+                <xsd:element minOccurs="1" ref="Owner"/>
+                <xsd:element ref="Authorization"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Implemented_CRs">
+        <xsd:complexType>
+            <xsd:attribute name="Brief_Description"/>
+            <xsd:attribute name="CR_Identifier"/>
+            <xsd:attribute name="Originator"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Linked_CIs">
+        <xsd:complexType>
+        	<xsd:attribute name="Identifier" use="required"/>
+        	<xsd:attribute name="Dependency_type" use="optional">
+        		<xsd:simpleType>
+        			<xsd:restriction base="xsd:string">
+        				<xsd:enumeration value="use"></xsd:enumeration>
+        				<xsd:enumeration value="include"></xsd:enumeration>
+        				<xsd:enumeration value="traced_to"></xsd:enumeration>
+        				<xsd:enumeration value="derived_from"></xsd:enumeration>
+        			</xsd:restriction>
+        		</xsd:simpleType>
+        	</xsd:attribute>
+        	<xsd:attribute name="Edition_Number" type="xsd:string" use="required"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Basic_Info">
+        <xsd:complexType>
+            <xsd:attribute name="Edition_Number"/>
+            <xsd:attribute name="Class"/>
+            <xsd:attribute name="Storage_location"/>
+            <xsd:attribute name="Edition_Date"/>
+            <xsd:attribute name="Identifier"/>
+            <xsd:attribute name="Abstract"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Authorization">
+        <xsd:complexType>
+            <xsd:attribute name="Produced_by"/>
+            <xsd:attribute name="Under_responsibility_of"/>
+            <xsd:attribute name="Approval_by"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Owner">
+        <xsd:complexType>
+            <xsd:attribute name="Project_Title"/>
+            <xsd:attribute name="Project_Manager"/>
+            <xsd:attribute name="Project_ID"/>
+            <xsd:attribute name="PoC"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Resources">
+        <xsd:complexType>
+            <xsd:attribute name="Identifier"/>
+            <xsd:attribute name="Type"/>
+            <xsd:attribute name="Edition_number"/>
+            <xsd:attribute name="Link"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
