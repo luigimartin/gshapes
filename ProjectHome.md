@@ -1,0 +1,1 @@
+Since Google KML do not provides any functionality to draw regular polygon and circles I decided to write a simple JAVA library to calculate coordinates for this kind of shapes.
